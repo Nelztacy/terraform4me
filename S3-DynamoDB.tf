@@ -1,11 +1,12 @@
 /**
 # S3 Bucket
-resource "aws_s3_bucket" "my_bucket" {
+resource "aws_s3_bucket" "technel_bucket" {
   bucket = "my-unique-bucket-name" # Specify your desired bucket name
   acl    = "private"                # Specify the ACL for the bucket, e.g., "private", "public-read", etc.
 
   tags = {
     Name = "My S3 Bucket"
+    Environment = "Dev"
   }
 }
 
