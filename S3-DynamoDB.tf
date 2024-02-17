@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "technel_bucket" {
 resource "aws_dynamodb_table" "my_table" {
   name           = "my-dynamodb-table" # Specify your desired table name
   billing_mode   = "PAY_PER_REQUEST"   # Specify the billing mode, e.g., "PROVISIONED" or "PAY_PER_REQUEST"
-  hash_key       = "id"                # Specify the hash key attribute name
+  hash_key       = "LOCKID"            # Specify the hash key attribute name
   attribute {
     name = "id"
     type = "S" # Specify the attribute type, e.g., "S" for string, "N" for number, etc.
